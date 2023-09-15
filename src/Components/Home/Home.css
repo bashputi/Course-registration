@@ -14,14 +14,13 @@
 }
 .card{
     width: 302px;
-    height: 402px;
+    height: 412px;
     border-radius: 12px;
     background-color: #FFF;
     
 }
 .main-part{
-    margin-left: 10px;
-    
+    margin-left: 11px;  
 }
 .card-img{
     padding-top: 16px;
@@ -29,7 +28,6 @@
     height: 144px;
     border-radius: 8px;
     margin-bottom: 32px;
-
 }
 .btn{
     width: 280px;
@@ -37,7 +35,11 @@
     border-radius: 8px;
     border: 1px solid #2F80ED;
     background: #2F80ED;
-    margin-top: 26px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
 }
 .credit{
     background-color: #fff;
@@ -49,4 +51,7 @@
 hr{
     width: 264px;
     margin: auto;
+}
+p, h4{
+    color: rgba(28, 27, 27, 0.60);
 }

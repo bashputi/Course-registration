@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import './Home.css'
 import { useEffect } from 'react';
+import Card from '../Card/Card';
+
 
 const Home = () => {
      
     const [allCourses, setAllCourses] = useState([]);
-
+    const [] = useState();
 
     useEffect(() => {
         fetch("./data.json")
@@ -23,15 +25,15 @@ const Home = () => {
                         allCourses.map((course) => (<div key={course.id} className='card'>
                         <div className='main-part'>
                         <div className='card-img'>
-                             <img src="https://i.ibb.co/12yvRR7/Rectangle-3.png" alt="" />
+                             <img src={course.image} alt="" />
                          </div>
-                         <h3 className='name'>introdution</h3>
-                         <p>hhhhhhhhh</p>
+                         <h3 className='name'>{course.name}</h3>
+                         <p>{course.article}</p>
                          <div className="info">
-                             <h2>Price</h2>
-                             <h2>Credit</h2>
+                             <h4>Price: {course.price}</h4>
+                             <h4>Credit: {course.hours}hrs</h4>
                          </div>
-                         <button className='btn'>Select</button>
+                         <button onClick={() => handleSelect(course)} className='btn'>Select</button>
                         </div>
                      </div>))
                     }
@@ -39,13 +41,7 @@ const Home = () => {
                 </div>
                <div>
                <div className='credit'>
-                    <h3>Credit Hour Remaining</h3>
-                    <hr />
-                    <h3>Course Name</h3>
-                    <hr />
-                    <h5>Total Credit Hour</h5>
-                    <hr />
-                    <h5>Total Price</h5>
+                    <Card></Card>
                 </div>
                </div>
               </div>
