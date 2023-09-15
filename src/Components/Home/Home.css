@@ -1,0 +1,47 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+.info{
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+    width: 302px;
+    height: 402px;
+    border-radius: 12px;
+    background-color: #FFF;
+    
+}
+.main-part{
+    margin-left: 10px;
+    
+}
+.card-img{
+    padding-top: 16px;
+    width: 280px;
+    height: 144px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+
+}
+.btn{
+    width: 280px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #2F80ED;
+    background: #2F80ED;
+    margin-top: 26px;
+}
+.credit{
+    background-color: #fff;
+    width: 312px;
+    border-radius: 12px;
+    padding: 24px;
+}
+hr{
+    width: 264px;
+    margin: auto;
+}
