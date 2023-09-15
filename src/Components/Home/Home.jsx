@@ -7,13 +7,48 @@ import Card from '../Card/Card';
 const Home = () => {
      
     const [allCourses, setAllCourses] = useState([]);
-    const [] = useState();
+
+    const [selectedCourse, setSelectedCourse] = useState([]);
+    const [remainingHours, setRemainingHours] = useState(20);
+    const [totalHours, setTotalHours] = useState(0);
+    const [totalCost, setTotalCost] = useState(0);
 
     useEffect(() => {
         fetch("./data.json")
         .then((res) => res.json())
         .then((data) => setAllCourses(data));
     }, []);
+
+    const handleSelectedCourse = (course) => {
+        const isExist = selectedCourse.find(item => item.id == course.id)
+        let count = course.hours;
+        if(isExist){
+            return alert('Already added');
+        }else{
+            selectedCourse.forEach((item) => {
+                count += item.hours;
+            });
+            
+            let money = course.price;
+            selectedCourse.forEach((item) => {
+                money += item.price;
+            });
+
+            const totalRemainingHours = 20 - count;
+            if(count > 20){
+                return alert('No Remaining Hours Left!!');
+            }else{
+                setSelectedCourse([...selectedCourse, course]);
+                setRemainingHours(totalRemainingHours);
+                setTotalHours(count);
+                setTotalCost(money)
+            }
+
+            
+        }
+    }
+
+
 
 
     return (
@@ -33,7 +68,7 @@ const Home = () => {
                              <h4>Price: {course.price}</h4>
                              <h4>Credit: {course.hours}hrs</h4>
                          </div>
-                         <button onClick={() => handleSelect(course)} className='btn'>Select</button>
+                         <button onClick={() => handleSelectedCourse(course)} className='btn'>Select</button>
                         </div>
                      </div>))
                     }
@@ -41,7 +76,7 @@ const Home = () => {
                 </div>
                <div>
                <div className='credit'>
-                    <Card></Card>
+                <Card selectedCourse={selectedCourse} remainingHours={remainingHours} totalHours={totalHours} totalCost={totalCost}></Card>
                 </div>
                </div>
               </div>
