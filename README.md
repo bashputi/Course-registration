@@ -1,8 +1,15 @@
-# React + Vite
+## Add at least 3 Project features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ - By clicking any "Select" button user can get the name of that particular course.
+ - If user click twice any button, it will show a toast.
+ - User can get total duration of selected course.
 
-Currently, two official plugins are available:
+## Discuss how you managed the state in your assignment project.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I have used 5 'useState' hook to declare various pieces of state:
+
+- 'allCourses' & 'selectedCourse' holds an empty array of courses, other hook's holds provided value.
+
+- 'setAllCourses' , 'setSelectedCourse' etc are functions that allow to update state value like 'allCourses' , 'selectedCourse' etc.
+
+- These state variables and updater function are then used throughout the component to manage and update the state as needed based on the component's logic and user interactions.

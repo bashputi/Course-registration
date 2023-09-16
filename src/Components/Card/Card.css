@@ -1,0 +1,15 @@
+.credit-hours{
+    color: #2F80ED;
+    font-size: 18px;
+    font-weight: 700;
+}
+.names{
+    color: rgba(28, 27, 27, 0.80);
+    font-size: 16px;
+    font-weight: 500;
+}
+.total{
+    color: rgba(28, 27, 27, 0.80);
+    font-size: 16px;
+    font-weight: 600;
+}

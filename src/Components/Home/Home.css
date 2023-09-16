@@ -10,17 +10,18 @@
 .info{
     display: flex;
     justify-content: space-around;
+    margin-left: -30px;
     
 }
 .card{
-    width: 302px;
-    height: 412px;
+    width: 322px;
+    height: 425px;
     border-radius: 12px;
     background-color: #FFF;
     
 }
 .main-part{
-    margin-left: 11px;  
+    margin-left: 20px;  
 }
 .card-img{
     padding-top: 16px;
@@ -54,4 +55,13 @@ hr{
 }
 p, h4{
     color: rgba(28, 27, 27, 0.60);
+}
+.icone{
+    display: flex;
+}
+.icone h4{
+    margin-top: 1px;
+}
+.toast{
+    margin-right: 30px;
 }

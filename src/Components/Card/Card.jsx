@@ -3,18 +3,18 @@ import "./Card.css"
 const Card = ({ selectedCourse, remainingHours, totalHours, totalCost}) => {
     return (
         <div>
-            <h3>Credit Hour Remaining: {remainingHours} hrs</h3>
+            <h3 className="credit-hours">Credit Hour Remaining: {remainingHours} hrs</h3>
                     <hr />
                     <h3>Course Name</h3>
                     {
                         selectedCourse.map((course) => (
-                            <li key={AbortController.id}>{course.name}</li>
+                            <li key={AbortController.id} className="names">{course.name}</li>
                         ))
                     }
                     <hr />
-                    <h5>Total Credit Hour: {totalHours}</h5>
+                    <h5 className="total">Total Credit Hour: {totalHours} hrs</h5>
                     <hr />
-                    <h5>Total Price: {totalCost}</h5>
+                    <h5 className="total">Total Price: {totalCost} USD</h5>
                    
                   
         </div>
